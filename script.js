@@ -1,55 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- Animation générale des sections ---
-    const sectionsToAnimate = document.querySelectorAll('.animate-on-scroll');
-
-    const sectionObserver = new IntersectionObserver((entries, observer) => {
+    // --- Observateur générique pour les animations d'entrée/sortie ---
+    const animationObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            // Si l'élément entre dans le viewport, on ajoute la classe 'visible'
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Optionnel: ne l'anime qu'une fois
+            } 
+            // Sinon (il sort), on retire la classe pour réinitialiser l'animation
+            else {
+                entry.target.classList.remove('visible');
             }
         });
     }, {
-        rootMargin: '0px',
-        threshold: 0.15 // Déclenche quand 15% de la section est visible
+        threshold: 0.1 // Déclenche quand 10% de l'élément est visible
     });
 
+    // --- Appliquer l'observateur aux sections générales ---
+    const sectionsToAnimate = document.querySelectorAll('.animate-on-scroll');
     sectionsToAnimate.forEach(section => {
-        sectionObserver.observe(section);
+        animationObserver.observe(section);
     });
 
-
-    // --- Animation spécifique pour l'équipe (membre par membre) ---
+    // --- Appliquer l'observateur aux membres de l'équipe ---
     const teamMembers = document.querySelectorAll('.team-member');
-
-    // 1. Appliquer les classes initiales pour la direction de l'animation
     teamMembers.forEach((member, index) => {
-        // Alterne entre gauche (index pair) et droite (index impair)
+        // Alterne la direction de l'animation
         if (index % 2 === 0) {
             member.classList.add('from-left');
         } else {
             member.classList.add('from-right');
         }
+        // Observe chaque membre individuellement
+        animationObserver.observe(member);
     });
-
-    // 2. Observer chaque membre
-    const teamObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        rootMargin: '0px',
-        threshold: 0.2 // Déclenche un peu plus tard pour un effet décalé
-    });
-
-    teamMembers.forEach(member => {
-        teamObserver.observe(member);
-    });
-
 
     // --- Gérer la fermeture du menu burger sur mobile après un clic ---
     const navLinks = document.querySelectorAll('.nav-link');
@@ -63,5 +47,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
 });

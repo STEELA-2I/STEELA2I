@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Google Fonts (Poppins, qui correspond bien au style moderne) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -42,18 +42,19 @@
 
     <main>
         <!-- =================== ACCUEIL =================== -->
-        <section id="accueil" class="d-flex align-items-center">
+        <section id="accueil" class="d-flex align-items-center position-relative">
             <div class="container text-center">
                 <div class="animate-on-scroll">
                     <h1 class="display-3 fw-bold">Recherche d'un Projet de Fin d'Études</h1>
+                    <h2 class="h4 fw-normal mt-3">Ecole d'ingénieur - IG2I de Centrale Lille Institut</h2>
                     <p class="lead my-4">Année universitaire 2026-2027</p>
                     <a href="assets/plaquette-pfe.pdf" class="btn btn-primary btn-lg" download>
                         Télécharger la plaquette
                     </a>
                     <div class="mt-5">
-                        <img src="assets/logo-steela.png" alt="Logo STEELA 2I" height="60" class="mx-3">
-                        <img src="assets/logo-centrale.png" alt="Logo Centrale Lille IG2I" height="60" class="mx-3">
-                        <img src="assets/logo-cti.png" alt="Logo CTI" height="60" class="mx-3">
+                        <img src="assets/logo-steela.png" alt="Logo STEELA 2I" class="accueil-logo mx-3">
+                        <img src="assets/logo-centrale.png" alt="Logo Centrale Lille IG2I" class="accueil-logo mx-3">
+                        <img src="assets/logo-cti.png" alt="Logo CTI" class="accueil-logo mx-3">
                     </div>
                 </div>
             </div>
@@ -62,23 +63,25 @@
         <!-- =================== LE PROJET =================== -->
         <section id="projet" class="py-5 animate-on-scroll">
             <div class="container">
-                <h2 class="text-center mb-5">Le Projet</h2>
                 <div class="row g-5">
                     <div class="col-lg-12">
-                        <h3>Notre Mission</h3>
-                        <p>Nous sommes STEELA 21, une équipe de six élèves ingénieurs à l'IG2I de Centrale Lille Institut. Dans le cadre de notre dernière année, nous souhaitons co-construire un sujet de projet d'ingénierie qui se déroulera de début septembre 2026 au 31 janvier 2027 (1380 heures). Notre équipe pluridisciplinaire peut intervenir dans les systèmes embarqués, l'IoT, la logistique, l'automatique, la modélisation de données et l'électronique.</p>
+                        <div class="mission-content">
+                            <h3>Mission</h3>
+                            <p>Nous sommes STEELA 2I, une équipe de six élèves ingénieurs à l'IG2I de Centrale Lille Institut. Dans le cadre de notre dernière année, nous sommes à la recherche d'un projet d'ingénierie dans nos domaines d'activité. C'est dans ce cadre que nous souhaitons <strong>co-construire un sujet de projet</strong>.</p>
+                            <p>Ce projet se déroulera de <strong>début septembre 2026 au 31 janvier 2027</strong> avec un investissement de <strong>1380 heures</strong> au total par les 6 personnes de notre groupe.</p>
+                            <p>Nous sommes une équipe polyvalente capable de travailler sur un projet <strong>pluridisciplinaire</strong> grâce aux diverses compétences que nous avons acquises. En effet nous avons chacun travaillé dans des domaines différents, ce qui nous confère une forte adaptabilité. C'est pourquoi nous pouvons intervenir dans les <strong>systèmes embarqués, l'IoT, la logistique, l'automatique, la gestion et le dimensionnement de flux entre applications, la modélisation de données, la data, la modélisation de systèmes et l'électronique</strong>.</p>
+                        </div>
                     </div>
                     <div class="col-lg-12">
-                        <h3>Nos Attentes</h3>
-                        <p>Désireux de renforcer nos compétences, nous ambitionnons de concevoir des solutions innovantes, performantes et durables. Ce projet pourra porter sur la conception de systèmes embarqués ou connectés, l'automatisation de processus, l'optimisation logistique, la modélisation et l'analyse de systèmes complexes. Il sera encadré par Centrale Lille Institut (50 heures) et financé par l'entreprise partenaire.</p>
+                        <h3>Nos attentes</h3>
+                        <p>Désireux de renforcer et d'élargir nos compétences, nous ambitionnons de concevoir des <strong>solutions innovantes, performantes et durables</strong>, en adéquation avec les enjeux industriels actuels. Les savoir-faire acquis au cours de nos alternances et stages nous permettront de répondre efficacement aux <strong>besoins</strong> de votre entreprise, à travers un projet structuré et adapté à vos méthodes de travail.</p>
+                        <p>Ce projet pourra notamment porter sur la <strong>conception de systèmes embarqués ou connectés, l'automatisation de processus, l'optimisation et la supervision de flux de données ou logistiques</strong>, ainsi que la <strong>modélisation et l'analyse de systèmes complexes</strong>. Il sera encadré par le corps académique de <strong>Centrale Lille Institut à hauteur de 50 heures</strong> et financé par l'entreprise partenaire.</p>
                     </div>
                     <div class="col-lg-12">
                         <h3>Déroulement du PFE</h3>
-                        <p>Le projet se divise en deux phases clés :</p>
-                        <ul>
-                            <li><strong>Phase 1 (Février - Juin 2026) :</strong> Prospection et cadrage de la mission via un dossier d'expression de besoins co-rédigé avec vous.</li>
-                            <li><strong>Phase 2 (Septembre 2026 - Janvier 2027) :</strong> Mise en œuvre du projet, débutant par un état de l'art, soutenue par une gestion de projet et une démarche qualité pour garantir la fiabilité des livrables.</li>
-                        </ul>
+                        <p>Le projet représente 230 h/élèves soit 1380 heures de projet au total.</p>
+                        <!-- Le schéma du déroulement serait idéalement une image ici pour la fidélité -->
+                        <img src="assets/deroulement-pfe.png" alt="Phases du PFE" class="img-fluid my-3">
                     </div>
                 </div>
             </div>
@@ -87,14 +90,13 @@
         <!-- =================== NOTRE FORMATION =================== -->
         <section id="formation" class="py-5 bg-light animate-on-scroll">
             <div class="container">
-                <h2 class="text-center mb-5">Notre Formation</h2>
+                <h2 class="text-center mb-5">Notre formation</h2>
                 <div class="row align-items-center g-4">
                     <div class="col-lg-6">
-                        <p>L'IG2I propose une formation d'ingénieur en informatique et informatique industrielle sur 5 ans, intégrant 20 mois d'expérience en entreprise et une période à l'international.</p>
-                        <p>Nous sommes formés pour maîtriser l'interaction entre <strong>l'innovation numérique</strong> et les <strong>environnements industriels</strong>, en concevant des solutions pour systèmes autonomes, embarqués et complexes.</p>
+                        <p>L'IG2I propose une <strong>formation d'ingénieur en informatique et informatique industrielle</strong> sur un cycle de 5 ans. Le parcours intègre un total de <strong>20 mois d'expérience</strong> en entreprise, incluant une période de <strong>3 à 4 mois à l'international</strong> dont la durée s'ajuste selon la voie choisie : formation initiale ou apprentissage.</p>
+                        <p>L'IG2I forme des ingénieurs capables de maîtriser l'interaction constante entre l'<strong>innovation numérique</strong> et les <strong>environnements industriels</strong>. Cette expertise repose sur la conception et l'intégration de solutions numériques innovantes et responsables afin de réaliser des systèmes autonomes, embarqués et complexes, <strong>en combinant les dimensions logicielles et matérielles</strong>.</p>
                     </div>
                     <div class="col-lg-6">
-                        <!-- Le schéma est complexe, le mieux est de l'exporter en image depuis le PDF -->
                         <img src="assets/schema-formation.png" alt="Schéma de la formation IG2I" class="img-fluid rounded shadow">
                     </div>
                 </div>
@@ -104,36 +106,36 @@
         <!-- =================== L'ÉQUIPE =================== -->
         <section id="equipe" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5 animate-on-scroll">Notre Équipe</h2>
-                <p class="text-center lead mb-5 animate-on-scroll">Issus de la formation IG2I de Centrale Lille, nous formons un groupe pluridisciplinaire riche de nos expériences dans des domaines variés.</p>
+                <div class="animate-on-scroll">
+                    <h2 class="text-center mb-3">Notre équipe</h2>
+                    <p class="text-center lead mb-5">Issus de la formation IG2I de Centrale Lille, nous formons un groupe pluridisciplinaire riche de nos expériences dans des domaines variés.</p>
+                </div>
                 
-                <!-- Répéter ce bloc pour chaque membre -->
+                <!-- Membres de l'équipe -->
                 <div class="row team-member align-items-center mb-4">
                     <div class="col-md-2 text-center"><img src="assets/avatar-placeholder.png" class="team-avatar" alt="Photo Sarah Deseille"></div>
-                    <div class="col-md-10"><h4>Sarah Deseille</h4><p>Ambitieuse et rigoureuse, passionnée par l'IoT et les systèmes embarqués, avec des expériences dans le fluvial et l'automobile.</p></div>
+                    <div class="col-md-10"><h4>Sarah Deseille</h4><p>J'aime relever les défis et m'investir dans des projets porteurs de sens. Ambitieuse et rigoureuse, je suis motivée par les environnements techniques exigeants. L'IoT, les systèmes embarqués et la conception de systèmes informatiques sont des domaines qui me passionnent. Mes expériences professionnelles m'ont permis d'évoluer aussi bien dans le secteur fluvial que dans l'industrie automobile.</p></div>
                 </div>
                 <div class="row team-member align-items-center mb-4">
                     <div class="col-md-2 text-center"><img src="assets/avatar-placeholder.png" class="team-avatar" alt="Photo Théophile Huyghe"></div>
-                    <div class="col-md-10"><h4>Théophile Huyghe</h4><p>Fort d'une longue expérience industrielle, polyvalent et adaptable, avec un intérêt pour l'IoT et l'automatisme.</p></div>
+                    <div class="col-md-10"><h4>Théophile Huyghe</h4><p>Fort d'une longue expérience en milieu industriel, ma polyvalence et ma capacité d'adaptation me permettent de relever les différents défis que je peux rencontrer. Je porte un intérêt particulier aux possibilités qu'offrent l'évolutions des systèmes embarqués, l'loT et l'automatisme dans l'industrie, que j'ai pu explorer à travers différents projets.</p></div>
                 </div>
                  <div class="row team-member align-items-center mb-4">
                     <div class="col-md-2 text-center"><img src="assets/avatar-placeholder.png" class="team-avatar" alt="Photo Emeline Firmin"></div>
-                    <div class="col-md-10"><h4>Emeline Firmin</h4><p>Passionnée par l'intersection entre l'informatique et l'industrie. Curieuse, motivée et désireuse de mettre ses connaissances au service de projets concrets.</p></div>
+                    <div class="col-md-10"><h4>Emeline Firmin</h4><p>Passionnée par les sciences et les nouvelles technologies, je suis attirée par l'intersection entre l'informatique et l'industrie. Curieuse et motivée, j'aime relever des défis techniques. Mon parcours m'a permis de développer une compréhension des systèmes industriels et numériques. Animée par une volonté constante d'apprendre, je souhaite mettre mes connaissances au service de projets concrets.</p></div>
                 </div>
                 <div class="row team-member align-items-center mb-4">
                     <div class="col-md-2 text-center"><img src="assets/avatar-placeholder.png" class="team-avatar" alt="Photo Enzo Louvet"></div>
-                    <div class="col-md-10"><h4>Enzo Louvet</h4><p>Expériences multiples en automatisation, systèmes embarqués et IoT, avec une passion pour la couche hardware.</p></div>
+                    <div class="col-md-10"><h4>Enzo Louvet</h4><p>Grâce à mes expériences personnelles et professionnelles j'ai pu acquérir de multiples compétences dans les domaines de l'automatisation, des systèmes embarqués et de l'loT. Je me passionne tout particulièrement pour la couche hardware de ces derniers. Je sais me montrer sérieux et créatif.</p></div>
                 </div>
                  <div class="row team-member align-items-center mb-4">
                     <div class="col-md-2 text-center"><img src="assets/avatar-placeholder.png" class="team-avatar" alt="Photo Léa Camus"></div>
-                    <div class="col-md-10"><h4>Léa Camus</h4><p>Expertise en informatique industrielle consolidée par une alternance, visant à approfondir ses compétences à la croisée de l'électronique et la logistique.</p></div>
+                    <div class="col-md-10"><h4>Léa Camus</h4><p>Curieuse et rigoureuse, j'ai consolidé mon expertise en informatique industrielle grâce à une alternance dans le secteur de la recherche. Mon objectif avec ce projet de fin d'études est d'approfondir mes compétences dans les domaines à la croisée de l'informatique et l'industrie, comme l'électronique, les systèmes embarqués ou les chaînes logistiques.</p></div>
                 </div>
                 <div class="row team-member align-items-center mb-4">
                     <div class="col-md-2 text-center"><img src="assets/avatar-placeholder.png" class="team-avatar" alt="Photo Axel Roget"></div>
-                    <div class="col-md-10"><h4>Axel Roget</h4><p>Approche autodidacte et rigoureuse, a exploré divers domaines de l'informatique à l'électronique, actuellement en alternance dans la supervision industrielle.</p></div>
+                    <div class="col-md-10"><h4>Axel Roget</h4><p>En plus de mon parcours académique, ma passion pour les technologies m'a conduit à réaliser de nombreux projets. Avec une approche autodidacte et rigoureuse, j'ai découvert divers domaines, de l'informatique jusqu'à l'électronique. Je suis d'ailleurs en alternance dans le secteur de la supervision industrielle.</p></div>
                 </div>
-                <!-- Fin du bloc à répéter -->
-                
             </div>
         </section>
 
@@ -148,7 +150,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <!-- Bootstrap JS -->
