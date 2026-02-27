@@ -1,0 +1,112 @@
+/* Définition des variables de couleur de votre charte */
+:root {
+    --baltic-blue: #376795;
+    --lime-moss: #95C11F;
+    --lemon-lime: #C8D400;
+    --dark-text: #020300;
+    --white: #FEFFFE;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text);
+    scroll-padding-top: 70px; /* Pour compenser le header fixe */
+}
+
+/* Animations sur le scroll */
+.animate-on-scroll, .team-member {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation spécifique pour l'équipe */
+.team-member.from-left {
+    transform: translateX(-50px);
+}
+.team-member.from-right {
+    transform: translateX(50px);
+}
+
+/* Classe ajoutée par JS pour déclencher l'animation */
+.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* Styles du Header */
+.navbar {
+    transition: background-color 0.3s ease-in-out;
+}
+.nav-link {
+    font-weight: 600;
+    color: var(--dark-text) !important;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: var(--baltic-blue) !important;
+}
+
+/* Style des Sections */
+section {
+    padding: 6rem 0;
+    overflow-x: hidden; /* Empêche le débordement horizontal pendant les animations */
+}
+
+#accueil {
+    min-height: 100vh;
+    background-color: var(--white);
+    background-image:
+        linear-gradient(135deg, rgba(149, 193, 31, 0.1) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(149, 193, 31, 0.1) 25%, transparent 25%);
+    background-size: 40px 40px;
+}
+
+#projet {
+    background-color: var(--lime-moss);
+    color: var(--white);
+}
+
+#projet h3 {
+    color: var(--white);
+    border-left: 4px solid var(--lemon-lime);
+    padding-left: 1rem;
+}
+
+#contact {
+    background-color: var(--baltic-blue);
+    color: var(--white);
+}
+#contact h2, #contact a {
+    color: var(--white);
+}
+
+
+/* Style des Boutons */
+.btn-primary {
+    background-color: var(--baltic-blue);
+    border-color: var(--baltic-blue);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2c5176; /* Une version plus sombre du bleu */
+    border-color: #2c5176;
+}
+
+/* Style de la section Équipe */
+.team-avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--lime-moss);
+}
+.team-member h4 {
+    color: var(--baltic-blue);
+    font-weight: 700;
+}
