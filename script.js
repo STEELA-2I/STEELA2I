@@ -48,3 +48,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  // On définit les éléments à traiter (ex: paragraphes et titres)
+  const elements = document.querySelectorAll('p, h1, h2, h3, li');
+
+  elements.forEach(el => {
+    // La regex cherche : un espace, puis 1 ou 2 lettres, puis un espace
+    // On remplace le deuxième espace par \u00A0 (le code Unicode de &nbsp;)
+    el.innerHTML = el.innerHTML.replace(/(\s\w{1,2})\s/g, '$1\u00A0');
+  });
+});

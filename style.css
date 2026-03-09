@@ -7,6 +7,10 @@
     --white: #FEFFFE;
 }
 
+p {
+    text-align: justify;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--dark-text);
