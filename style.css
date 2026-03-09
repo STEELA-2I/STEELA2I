@@ -184,6 +184,53 @@ section {
     position: relative;
     padding-left: 0;
 }
+/* =================== DEROULEMENT =================== */
+#deroulement .container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10vw; /* Poussé de 10% de la largeur du viewport vers la droite */
+    transform: translateY(-50%);
+    width: 20vw; /* Largeur relative */
+    max-width: 150px; /* Limite de taille sur grand écran */
+    height: 30vw; /* Hauteur relative */
+    max-height: 250px; /* Limite de taille */
+    background-color: var(--lime-moss);
+    opacity: 0.8;
+    clip-path: polygon(
+        /* Dessine la forme des trois chevrons */
+        0% 0%, 20% 10%, 0% 20%, /* Premier chevron */
+        20% 30%, 0% 40%, 20% 50%, /* Deuxième chevron */
+        0% 60%, 20% 70%, 0% 80%, /* Troisième chevron */
+        100% 80%, 80% 70%, 100% 60%, /* Retour arrière du troisième */
+        80% 50%, 100% 40%, 80% 30%, /* Retour arrière du deuxième */
+        100% 20%, 80% 10%, 100% 0% /* Retour arrière du premier */
+    );
+    z-index: 0; /* Pour qu'il reste en arrière-plan */
+}
+/* =================== FORMATION =================== */
+#formation h2::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10vw; /* Poussé de 10% de la largeur du viewport vers la gauche */
+    transform: translateY(-50%);
+    width: 20vw; /* Largeur relative */
+    max-width: 150px; /* Limite de taille sur grand écran */
+    height: 30vw; /* Hauteur relative */
+    max-height: 250px; /* Limite de taille */
+    background-color: var(--lime-moss);
+    opacity: 0.8;
+    clip-path: polygon(
+        /* Dessine la forme des trois 'L' ou coins */
+        0% 0%, 100% 0%, 100% 16.6%, /* Premier L - segment haut */
+        20% 16.6%, 20% 33.3%, 100% 33.3%, /* Deuxième L - segment du milieu */
+        100% 50%, 20% 50%, 20% 66.6%, /* Troisième L - segment bas */
+        100% 66.6%, 100% 83.3%, 0% 83.3% /* Fermeture */
+    );
+    z-index: 0; /* Pour qu'il reste en arrière-plan */
+}
+
 
 /* =================== ÉQUIPE =================== */
 .team-avatar {
