@@ -14,9 +14,14 @@ body {
 }
 
 /* Animations sur le scroll - État initial */
-.animate-on-scroll, .team-member {
+.animate-on-scroll {
     opacity: 0;
     transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.team-member {
+    opacity: 0;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
@@ -25,6 +30,23 @@ body {
 }
 .team-member.from-right {
     transform: translateX(50px);
+}
+
+.team-member:not(.visible) {
+    transform: translate(0, 0);
+}
+
+@media (max-width: 800px) {
+    .team-member.from-left:not(.visible) {
+        transform: translateX(50px);
+    }
+    .team-member.from-right:not(.visible) {
+        transform: translateX(-50px);
+    }
+
+    .team-member.visible {
+        transform: translate(0, 0);
+    }
 }
 
 /* Classe ajoutée par JS pour déclencher l'animation */
@@ -138,12 +160,15 @@ section {
 }
 
 /* Délai d'animation pour chaque membre de l'équipe */
-.team-member.visible:nth-of-type(1) { transition-delay: 0s; }
+.team-member.visible {
+    transition-delay: 200ms;
+}
+/* .team-member.visible:nth-of-type(1) { transition-delay: 0s; }
 .team-member.visible:nth-of-type(2) { transition-delay: 0.15s; }
 .team-member.visible:nth-of-type(3) { transition-delay: 0.3s; }
 .team-member.visible:nth-of-type(4) { transition-delay: 0.45s; }
 .team-member.visible:nth-of-type(5) { transition-delay: 0.6s; }
-.team-member.visible:nth-of-type(6) { transition-delay: 0.75s; }
+.team-member.visible:nth-of-type(6) { transition-delay: 0.75s; } */
 
 /* =================== CONTACT =================== */
 #contact {
