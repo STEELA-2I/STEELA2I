@@ -146,9 +146,9 @@ section {
 }
 
 /* =================== PROJET =================== */
-#projet {
+/* #projet {
     background-color: var(--white);
-}
+} */
 
 .project-description {
     position: relative;
