@@ -150,13 +150,13 @@ section {
     background-color: var(--white);
 }
 
-.mission-content {
+.project-description {
     position: relative;
     padding-left: 2rem; /* Espace pour la barre */
 }
 
 /* Barre latérale bleue comme sur la maquette */
-.mission-content::before {
+.project-description::before {
     content: '';
     position: absolute;
     left: 0;
@@ -166,8 +166,23 @@ section {
     background-color: var(--baltic-blue);
 }
 
+.project-description h3::before {
+    content: '';
+    position: absolute;
+    left:-50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--lime-moss);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Forme hexagonale */
+    z-index: 2; 
+}
+
 #projet h3 {
     color: var(--dark-text);
+    position: relative;
+    padding-left: 0;
 }
 
 /* =================== ÉQUIPE =================== */
