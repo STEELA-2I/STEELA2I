@@ -195,7 +195,8 @@ section {
     top: 50%;
     transform: translateY(-50%);
     width: 40px;
-    height: 40px;
+    /* height: 40px; */
+    height: calc(2/sqrt(3)*40px);
     background-color: var(--lime-moss);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     /* Forme hexagonale */
