@@ -254,6 +254,56 @@ section {
     }
 }
 
+/* =================== FORMATION =================== */
+#formation h2 {
+    position: relative;
+}
+
+#formation h2::before {
+    content: '';
+    position: absolute;
+    top: 150%;
+    left: 0;
+    transform: translateY(calc(-50% - 40px)) translateX(-100px); /* on compense l'animation de base */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    /* width: 10vw;
+    height: 10vw; */
+    height: 100px;
+    width: 100px;
+    max-height: 200px;
+    background-image: url('assets/angle_haut_droit.svg');
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-position: left;
+    z-index: 1;
+    
+}
+
+#formation.visible h2::before {
+    opacity: 1;
+    transform: translateY(-75%) translateX(0);
+}
+
+@media (max-width: 1000px) and (min-width: 451px) {
+    #formation h2::before {
+        width: 50px;
+        height: 50px;
+        right: -80px;
+        top: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    #formation  h2::before {
+        right: -60px;
+        width: 50px;
+        height: 50px;
+        top: 100%;
+    }
+}
+
+
 
 /* =================== ÉQUIPE =================== */
 .team-avatar {
