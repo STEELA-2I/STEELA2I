@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     sectionsToAnimate.forEach(section => {
         animationObserver.observe(section);
     });
-
+    
     // --- Appliquer l'observateur aux membres de l'équipe ---
     const teamMembers = document.querySelectorAll('.team-member');
     teamMembers.forEach((member, index) => {
