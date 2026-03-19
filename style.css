@@ -88,6 +88,7 @@ section {
     padding: 6rem 0;
     overflow-x: hidden;
     position: relative;
+    scroll-margin-top: 6rem;
     /* Contexte de positionnement pour les formes */
 }
 
